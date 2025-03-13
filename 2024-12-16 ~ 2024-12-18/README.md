@@ -80,4 +80,4 @@
 * 전 세계 사람들이 인공지능의 잠재적 영향에 대해 더욱 인식하게 되었다.
 
 ## Github
-[Github 명령어](README.md)
+![Gitgub 명령어](./github%20cmd.png)
