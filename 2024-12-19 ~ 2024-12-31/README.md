@@ -35,3 +35,28 @@
 | `and` | 모두 참일때 참 |
 | `or` | 모두 거짓일때 거짓 / 둘중 하나라도 참이면 참 |
 | `not` | 참이면 거짓, 거짓이면 참 |
+
+## 문자열 인덱싱 및 슬라이싱
+|**문자열**| <span style="font-size:18px;">L</span> | <span style="font-size:18px;">i</span> | <span style="font-size:18px;">f</span> | <span style="font-size:18px;">e</span> | &nbsp; | <span style="font-size:18px;">i</span> | <span style="font-size:18px;">s</span> | &nbsp; | <span style="font-size:18px;">t</span> | <span style="font-size:18px;">o</span> | <span style="font-size:18px;">o</span> | &nbsp; | <span style="font-size:18px;">s</span> | <span style="font-size:18px;">h</span> | <span style="font-size:18px;">o</span> | <span style="font-size:18px;">r</span> | <span style="font-size:18px;">t</span> | <span style="font-size:18px;">,</span> |
+|:------------:|:----:|:----:|:----:|:----:|:------:|:----:|:----:|:------:|:----:|:----:|:----:|:------:|:----:|:----:|:----:|:----:|:----:|:----:|
+|**인덱스**|0|1|2|3|4|5|6|7||8|9|10|11|12|13|14|15|16|17|  
+|**음의 인덱스**|-18|-17|-16|-15|-14|-13|-12|-11|-10|-9|-8|-7|-6|-5|-4|-3|-2|-1|  
+  
+"Life" 슬라이싱 = s[0:4], s[:4], s[-18:-14]
+
+## print() 함수
+> <span style="font-size:30px;">print(값, ...,[sep=''], [end=''])</span>  
+값: 출력 대상  
+sep: 출력 대상들 사이에 넣을 구분 기호 지정, 기본값은 공백  
+end: 값 출력하고 마지막에 출력할 문자열 지정, 기본값은 줄바꿈  
+#### escape sequence
+| 이스케이프 시퀀스 | 표현 내용 |
+|:--------:|:------------:|
+| `\n`  | 새로운 줄 츨력 |
+| `\t`  | tab 출력 |
+| `\'`  | 작은따움표 출력 |
+| `\"`  | 큰따움표 출력 |
+| `\\`  | \ 문자 |
+| `\v`  | 수직 탭 출력 |
+| `\a`  | 경보 문자 출력 |
+| `\b`  | 백스스페이스 출력 |
