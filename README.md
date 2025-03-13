@@ -3,18 +3,9 @@
 
 ## 2024-12-16 ~ 2024-12-18
 ### AI 기본의 이해 및 활용
-<figure>
-  <img src="./2024-12-16%20~%202024-12-18/github%20cmd.png" alt="Github 명령어">
-  <figcaption>Github 명령어</figcaption>
-</figure>
-
-| ![Github 명령어](./2024-12-16%20~%202024-12-18/github%20cmd.png) |
-|:--:|
-| *Github 명령어*
-
 ![Github 명령어](./2024-12-16%20~%202024-12-18/github%20cmd.png)
 :--:
-*Github 명령어*
+**Github 명령어**
 
 
 ## 2024-12-19 ~ 2024-12-31
