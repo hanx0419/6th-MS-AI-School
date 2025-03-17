@@ -126,3 +126,12 @@ filtered = filter(is_even, numbers)
 
 print(list(filtered))  # [2, 4, 6]
 ```
+
+## 데이터 분석의 5단계
+```mermaid
+graph LR
+    A["문제 정의"] --> B["데이터 수집"]
+    B --> C["데이터 가공"]
+    C --> D["데이터 분석"]
+    D --> E["시각화 및 탐색"]
+```
