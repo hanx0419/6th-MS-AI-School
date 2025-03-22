@@ -2,6 +2,14 @@ import os
 from dotenv import load_dotenv
 from openai import AzureOpenAI  # 최신 openai 패키지 사용 (azure 지원 포함)
 
+azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
+azure_oai_key = os.getenv("AZURE_OAI_KEY")
+azure_oai_deployment = os.getenv("AZURE_OAI_DEPLOYMENT")
+azure_search_endpoint = os.getenv("AZURE_SEARCH_ENDPOINT")
+azure_search_key = os.getenv("AZURE_SEARCH_KEY")
+azure_search_index = os.getenv("AZURE_SEARCH_INDEX")
+
+
 def main(): 
     try: 
         # Get configuration settings from .env file
@@ -44,7 +52,7 @@ def main():
                     max_tokens=800
                 )
 
-                # Print the generated response
+                # Print the generated response  
                 print("Response from Azure OpenAI:\n")
                 print(response.choices[0].message.content)
                 print("-" * 200)
