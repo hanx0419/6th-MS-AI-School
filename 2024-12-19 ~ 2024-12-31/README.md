@@ -164,18 +164,37 @@ graph LR
 > - 유성우는 관측자의 위치, 관측 시기, 관츨 날짜의 달의 위상 등에 따라 유성우를 볼 수 있는 지의 여부가 달라집니다.  
 
 > - 4개의 혜성에서 발생하는 주요 5대 유성우에 집중
-<style>
-  .mermaid svg text {
-    text-anchor: middle;
-  }
-</style>
 ```mermaid
 graph LR
-    A["Lyrids (거문고자리 유성우)"] --> B["Comet Thatcher (데처 혜성)"]
-    C["Eta Aquarids                     (에타 물병자리 유성우)"] --> D["Comet Halley (핼리 혜성)"]
-    E["Orionids (오리온자리 유성우)"] --> D
-    F["Perseids (페르세우스자리 유성우)"] --> G["Comet Swift-Tuttle (스위프트-터틀 혜성)"]
-    H["Leonids (사자자리 유성우)"] --> I["Comet Tempel-Tuttle (템플-터틀 혜성)"]
-```
+    A["Lyrids (거문고자리 유성우)"] <--> B["Comet Thatcher (데처 혜성)"]
+    C["Eta Aquarids (에타 물병자리 유성우)"] <--> D["Comet Halley (핼리 혜성)"]
+    E["Orionids (오리온자리 유성우)"] <--> D
+    F["Perseids (페르세우스자리 유성우)"] <--> G["Comet Swift-Tuttle (스위프트-터틀 혜성)"]
+    H["Leonids (사자자리 유성우)"] <--> I["Comet Tempel-Tuttle (템플-터틀 혜성)"]
+```  
 
-유성우를 가장 관찰할 수 있는 날짜를 예측하는 코드 작성
+> - 달의 위상(Moon phases) : 유성우를 볼 수 있는 기간 중 달빛이 밝지 않은 날짜를 고려
+> - 위도(Latitude) : 관측자가 위차한 도시의 실제 위도 정보를 고려
+> - 항아의 유성우  
+    Over the Moon 영화 속에서 페이페이는 추석 후에 달로 여행을 떠나는데 추석 시기에 볼 수 있는 유성우를 가상의 항아 유성우로 적용하여 데이터프레임에 추가  
+    Over the Moon 영화의 배동 도시인 중국 Beijing을 입력하여 결과를 확인  
+    ![predict best meteor shower beijing](./pre_meteor_shower_beijing.png)  
+
+**최종 목표는 유성우를 가장 관찰할 수 있는 날짜를 예측하는 코드 작성**  
+
+![predict best meteor shower](./Predict_meteor_shower.png)  
+
+## 따릉이 자전거 데이터 분석 및 시각화
+> - 주요 토픽  
+    1. 시간개념에 따른 이용 패턴 : 언제 많이 타는지와 한번 대여하면 어느 정도의 시간을 대여하는지에 대한 분석  
+    2. 장소적 특징에 따른 이용패턴 : 대여소가 위차한 장소적 특징에 따라서 사용자의 이용패턴  
+    3. 시간 개념 X 장소적 특징에 따른 이용패턴 : 시간 개념과 대여소가 위차한 장소적 특징을 모두 고려하여 사용자의 이용 패턴을 분석  
+> - 따릉이 데이터 : https://data.seoul.go.kr  
+> - 대여시간대 X 요일이용건수 히트맵그래프    
+    ![time avg map](./time_avg_hitmap.png)  
+    **17~19시 퇴근시간 대에 따릉이를 많이 이용**  
+> - 구간별 따릉이 이용시간 평균 지도 표시  
+    ![bike avg map](./bike_avg_map.png)  
+    **서울시 용산구에서 가장 많이 이용**  
+> - 인기 있는 대여소 TOP50(주말, 파란색), TOP10(평일, 빨간색)  
+    ![bike top](./bike_top.png)  
