@@ -70,6 +70,7 @@ def sample_extract_and_abstractive_summarization(client):
                     print("Boundary - Offset: {}, Length: {}".format(sentence.offset, sentence.length))
                 print()  # For readability
 
+        # 참고 Abstractive Summarization 기능이 영어 데이터셋에 기반한다는 점 
         # Process Abstractive Summary result (second action)
         abstractive_result = result[1]
         if abstractive_result.is_error:
