@@ -1,6 +1,6 @@
 import os
 from dotenv import load_dotenv
-from openai import AzureOpenAI  # 최신 openai 패키지 사용 (azure 지원 포함)
+from openai import AzureOpenAI 
 
 azure_oai_endpoint = os.getenv("AZURE_OAI_ENDPOINT")
 azure_oai_key = os.getenv("AZURE_OAI_KEY")
