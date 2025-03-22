@@ -35,4 +35,5 @@ def pii_recognition_example(client):
             print("\tConfidence Score: {}".format(entity.confidence_score))
             print("\tOffset: {}".format(entity.offset))
             print("\tLength: {}".format(entity.length))
+            
 pii_recognition_example(client)
