@@ -135,3 +135,47 @@ graph LR
     C --> D["데이터 분석"]
     D --> E["시각화 및 탐색"]
 ```
+
+## Over the Moon : 아르테미스 달탐사 데이터 분석
+> Over the Moon은 페이페이라는 소녀가 달의 여신 항아를 만나기 위해 로켓을 만들어 모험을 떠나는 아름다운 이야기의 영화다.  
+> - 암석 샘플 데이터 : https://curator.jsc.nasa.gov/lunar/samplecatalog/index.cfm  
+> - 달 탐사 / 유성우 학습 모듈 데이터 : https://github.com/drguthals/learnwithdrg/tree/main/OverTheMoon  
+> - 달 탐사선 중량 데이터 : https://nssdc.gsfc.nasa.gov/nmc/spacecraft/display.action?id=1969-059C  
+> - 승무원 영역(Crewed Area) : 달 모듈(Lunar Module) + 명령 모듈(Command Module)  
+> - 달 모듈(Lunar Module) : 달 궤도에 도달한 후 명령 모듈에서 분리되는 모듈로서 달 표면에 착률하고 우주 비생하스를 수송한다.
+> - 명령 모듈(Command Module) : 우주 비행사가 생활하는 모듈로서 우주 비행사와 수집된 암석 샘플이 모듈에 실려 지구로 귀환한다.  
+> - Payload : 로켓 안에 실리는 물건의 하중(우주선 안에 실리는 물건으로 화물, 승무원, 과학 장비, 실험 장치 등 즉, 승무원 영역은 페이로드에 속함)  
+
+> - 아르테미스 임무에서 고려할 사항  
+    1. 아르테미스 임무에 사용할 **우주선의 전체 사양을 모른다.**
+    2. NASA Factsheet on the Space Launch System(SLS)와 Orion Modules의 일부 정보를 사용하여 **아르테미스 달탐사의 예상 승무원 영역값과 예상 페이로드 값을 수집**하고 **아폴로 달탐사 데이터 분석에서 얻은 비율을 사용한다.**
+    3. 페이로드는 로켓이 대기권을 통과하여 우주로 나갈 수 있는 총중량을 말하며 이것이 각 모듈의 정확한 중량보다 더 정확할 수 있다.
+    4. 아폴로 임무에 사용된 **Saturn V 페이로드**는 43,500Kg이고 모듈 중량은 임무마다 달랐다.
+    5. **아르테미스 임무와 관련한 예측에 사용할 비율을 결정**하기 위해 아폴로 임무에 사용된 Saturn V 페이로드, 아폴로 각 임무의 암석샘를 중량, 모듈 중량, 승무원 영역 중량 데이터를 사용하겠다.
+
+> - 아르테미스 우주 비행사가 최종 수집할 암석 종류와 개수  
+![Artemis Overview](./Artemis_overview.png)  
+    최종적으로 중량을 고려하여 Basalt 13개, Breccia 35개, Crustal 20개까지 수집이 가능하다.  
+
+## Over the Moon : 아르테미스 유성우 데이터 분석  
+> - 유성우(Meteor Shower) : 지구가 공전하며 유성체 흐름을 지나갈 때 많은 양의 유성이 떨어지는 유성우 발생(지구의 공전에 의해 매년 특정 시기에 특정 유성우 발생)  
+> - 유성체 흐름(Meteoroid Stream) : 유성체가 혜성에서 떨어져 나올 때 혜성의 속도와 차이가 발생(유성체들은 혜성의 공전 궤도를 따라 띠를 형성)  
+> - 유성우는 한 지점에서 시작해서 사방으로 퍼져 나가는 형태로 관측(복사점(radiant) 근처에서 위치한 별자리 이름을 유성우의 이름을 사용)  
+> - 유성우는 관측자의 위치, 관측 시기, 관츨 날짜의 달의 위상 등에 따라 유성우를 볼 수 있는 지의 여부가 달라집니다.  
+
+> - 4개의 혜성에서 발생하는 주요 5대 유성우에 집중
+<style>
+  .mermaid svg text {
+    text-anchor: middle;
+  }
+</style>
+```mermaid
+graph LR
+    A["Lyrids (거문고자리 유성우)"] --> B["Comet Thatcher (데처 혜성)"]
+    C["Eta Aquarids                     (에타 물병자리 유성우)"] --> D["Comet Halley (핼리 혜성)"]
+    E["Orionids (오리온자리 유성우)"] --> D
+    F["Perseids (페르세우스자리 유성우)"] --> G["Comet Swift-Tuttle (스위프트-터틀 혜성)"]
+    H["Leonids (사자자리 유성우)"] --> I["Comet Tempel-Tuttle (템플-터틀 혜성)"]
+```
+
+유성우를 가장 관찰할 수 있는 날짜를 예측하는 코드 작성
