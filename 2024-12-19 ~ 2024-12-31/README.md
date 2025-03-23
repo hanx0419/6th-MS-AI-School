@@ -197,4 +197,4 @@ graph LR
     ![bike avg map](./image/bike_avg_map.png)  
     **서울시 용산구에서 가장 많이 이용**  
 > - 인기 있는 대여소 TOP50(주말, 파란색), TOP10(평일, 빨간색)  
-    ![bike top](./image/bike_top.png)  
+    ![bike top](./image/bike_top.png)    
