@@ -154,7 +154,7 @@ graph LR
     5. **아르테미스 임무와 관련한 예측에 사용할 비율을 결정**하기 위해 아폴로 임무에 사용된 Saturn V 페이로드, 아폴로 각 임무의 암석샘를 중량, 모듈 중량, 승무원 영역 중량 데이터를 사용하겠다.
 
 > - 아르테미스 우주 비행사가 최종 수집할 암석 종류와 개수  
-![Artemis Overview](./Artemis_overview.png)  
+![Artemis Overview](./image/Artemis_overview.png)  
     최종적으로 중량을 고려하여 Basalt 13개, Breccia 35개, Crustal 20개까지 수집이 가능하다.  
 
 ## Over the Moon : 아르테미스 유성우 데이터 분석  
@@ -178,11 +178,11 @@ graph LR
 > - 항아의 유성우  
     Over the Moon 영화 속에서 페이페이는 추석 후에 달로 여행을 떠나는데 추석 시기에 볼 수 있는 유성우를 가상의 항아 유성우로 적용하여 데이터프레임에 추가  
     Over the Moon 영화의 배동 도시인 중국 Beijing을 입력하여 결과를 확인  
-    ![predict best meteor shower beijing](./pre_meteor_shower_beijing.png)  
+    ![predict best meteor shower beijing](./image/pre_meteor_shower_beijing.png)  
 
 **최종 목표는 유성우를 가장 관찰할 수 있는 날짜를 예측하는 코드 작성**  
 
-![predict best meteor shower](./Predict_meteor_shower.png)  
+![predict best meteor shower](./image/Predict_meteor_shower.png)  
 
 ## 따릉이 자전거 데이터 분석 및 시각화
 > - 주요 토픽  
@@ -191,10 +191,10 @@ graph LR
     3. 시간 개념 X 장소적 특징에 따른 이용패턴 : 시간 개념과 대여소가 위차한 장소적 특징을 모두 고려하여 사용자의 이용 패턴을 분석  
 > - 따릉이 데이터 : https://data.seoul.go.kr  
 > - 대여시간대 X 요일이용건수 히트맵그래프    
-    ![time avg map](./time_avg_hitmap.png)  
+    ![time avg map](./image/time_avg_hitmap.png)  
     **17~19시 퇴근시간 대에 따릉이를 많이 이용**  
-> - 구간별 따릉이 이용시간 평균 지도 표시  
-    ![bike avg map](./bike_avg_map.png)  
+> - 지역구별 따릉이 이용시간 평균 지도 표시  
+    ![bike avg map](./image/bike_avg_map.png)  
     **서울시 용산구에서 가장 많이 이용**  
 > - 인기 있는 대여소 TOP50(주말, 파란색), TOP10(평일, 빨간색)  
-    ![bike top](./bike_top.png)  
+    ![bike top](./image/bike_top.png)  
