@@ -12,7 +12,7 @@ def sample_recognize_custom_entities() -> None:
     project_name = os.getenv("CUSTOM_ENTITIES_PROJECT_NAME")
     deployment_name = os.getenv("CUSTOM_ENTITIES_DEPLOYMENT_NAME")
 
-    path_to_sample_document = os.path.join(os.getcwd(), "text_samples", "custom_entities_sample.txt")
+    path_to_sample_document = os.path.join(os.getcwd(), "test_samples", "custom_entities_sample.txt")
 
     text_analytics_client = TextAnalyticsClient(
         endpoint=endpoint,
