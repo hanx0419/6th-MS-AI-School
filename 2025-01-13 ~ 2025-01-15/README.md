@@ -32,9 +32,9 @@ sudo apt-get install lynx w3m links -y
 cd ../../  
 ./webui.sh --share --enable-insecure-extension-access --gradio-auth <username:password>  
 
-Lora 모델  
+> - Lora 모델 설치  
 https://civitai.com/  
-~/stable-diffusion-webui-forge/models/Lora  
+cd ~/stable-diffusion-webui-forge/models/Lora  
 civitdl model_id . -k  
 
 cd ~/stable-diffusion-webui-forge/outputs/txt2img-images/<YYYYMM_DD>  
