@@ -97,7 +97,7 @@ yolov3.weights https://pjreddie.com/media/files/yolov3.weights
 
 ## Video Indexer  
 https://learn.microsoft.com/ko-kr/azure/ai-services/computer-vision/how-to/video-retrieval  
-responsible_ai.mp4 동영상 파일을 Blob Container 업로드 후 SAS URL 생성 필요  
+./data/responsible_ai.mp4 동영상 파일을 Blob Container 업로드 후 SAS URL 생성 필요  
 
 ## 감지 출력 이미지  
 |<b>Azure BackGroundRemoval</b>|
