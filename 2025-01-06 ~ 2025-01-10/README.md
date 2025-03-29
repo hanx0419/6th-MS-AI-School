@@ -141,4 +141,7 @@ sudo a2ensite wordpress.conf
 sudo a2enmod rewrite  
 sudo systemctl restart apache2  
 
-<PUBLIC_IP_ADDRESS> 접속
+<PUBLIC_IP_ADDRESS> 접속 후 WordPress 설치
+
+## WordPress install 후 결과이미지  
+![wordpress](./image/install_wordpress.png)  
