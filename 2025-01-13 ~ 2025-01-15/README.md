@@ -58,7 +58,7 @@ Refiner : SDXL에서 사용하기 위해 개발됨, 단순히 두 개의 모델�
 Sketch : img2img 탭 내에 있는 기능으로 손으로 그린 스케치를 이미지로 변환  
 배경제거 : stable-dffiusion-webui-rembg 이미지 배경 제거 도구를 설치하여 Extension에서 사용 가능
 
-# Stable Diffusion 설치 및 시작  
+## Stable Diffusion 설치 및 시작  
 Azure Machine learning 생성  
 computing instance 만들기(GPU)  
 
@@ -100,3 +100,9 @@ cd ~/stable-diffusion-webui-forge/outputs/txt2img-images/<YYYYMM_DD>
 zip -r output.zip .  
 exit;  
 scp -i "<YOUR_PRIVATE_KEY_PATH>" -P 50000 azureuser@<PUBLIC_IP_ADDRESS>:":/home/azureuser/stable-diffusion-webui-forge/outputs/txt2img-images/<YYYY-MM-DD>/output.zip" "<YOUR_DOWNLOAD_PATH>"  
+
+## Stable Diffusion output image  
+| <b>Character</b> | <b>Image</b> |
+|------------------|-------------|
+| Emma Watson      | <img src="image/EmmaWatson_prompt.png" width="300"/> |
+| Piano & Keys     | <img src="image/PianoKeys_prompt.png" width="300"/> |
