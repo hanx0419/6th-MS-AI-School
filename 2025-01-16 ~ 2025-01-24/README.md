@@ -57,3 +57,24 @@ flowchart BT
 - 신뢰구간(Confidence Interval) : 모수가 신뢰구간 안에 포함될 것으로 예상되는 범위  
 - 신뢰수준(Confidence Level) : 모수가 신뢰구간에 포함될 확률  
 - 상관계수(Correlation Coefficient) : 두 분수 간의 관계의 강도와 방향을 나타내는 수치  
+
+## Azure ML Designer 활용하여 자전거 렌털 수요 예측 모델 구현  
+- 자전거 수요에 영향을 미치는 요소 : 날씨, 계절, 휴일/평일  
+- 모델링 유형 : 회귀(Regression)(=옛날의 대표적인 자리(평균)로 돌아간다 / 예측한 선으로 오차가 회귀하도록 만들어진 모델)  
+> - 데이터의 이해  
+    • day – 관찰이 이루이진 날짜  
+    • mnth – 관찰이 이루어진 월  
+    • year – 관찰이 이루어진 년도  
+    • season – 계절 (1: 겨울. 2: 봄, 3: 여름, 4: 가을)  
+    • holiday – 공휴일 여부 (1:공휴일, 0: 공휴일아님)  
+    • weekday – 요일 (0:일, 1:월, 2:화, 3:수, …, 6:토)  
+    • workinday – 근무일 여부 (1:근무일, 0:근무일 아님)  
+    • weathersit – 날씨 상황  
+        • 1 : Clear, Few clouds, Partly cloudy, Partly cloudy  
+        • 2 : Mist+Cloudy, Mist+Broken clouds, Mist+Few clouds, Mist  
+        • 3 : Light Snow, Light Rain+Thunderstorm+Scattered clouds, Light Rain+Scattered clouds  
+        • 4 : Heavy Rain+Ice Pallets+Thunderstorm+Mist, Snow+Fog  
+    • temp, atemp – 온도와 체감 온도  
+    • hum - 습도  
+    • windspeed – 바람의 세기  
+    • rentals – 자전거 대여수 – 라벨(타겟)  
