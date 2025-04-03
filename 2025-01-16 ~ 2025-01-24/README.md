@@ -238,3 +238,25 @@ graph TD
 5. 결정계수(R², Coefficient of Determination) = 0.678  
     - 예측한 값이 실제값을 얼마나 잘 설명하는지 보여주는 지표  
     - 모델이 예측한 값이 실제 대여량 패턴의 67.8%를 설명  
+
+## Azure ML Designer 활용하여 프로야구 데이터를 통해서 선수능력 측정 모델 구현
+> - Azure ML Studio 데이터에 ./iamge/2000_2001~2014_hitter.csv 및 .xlsx 등록  
+> - 선수능력 측정에 영향을 미치는 요소 : Traditional Stats을 보완한 sabermetrics  
+> - 모델링 유형 : 군집(Clusting)(=유사한 항목을 그룹화)  
+> - 데이터의 이해  
+>   - OPS(On base precentage plus slugging percentage)  
+>      - 출루율과 장타율의 합. 계산이 용이하며 이해하기 쉬움. 타자의 가치를 잘 나타내며 가장 많이 쓰이는 지표임. 타자의 주루 능력, 병살타, 희생타 등이 반영되지 않음  
+>   - ISO(Isolated Power)  
+>       - 순수장타력 : 타자 고유의 힘을 나타냄. 장타율에서 타율을 뺀 값. (참고 : 장타율에는 타율이 포함되어 있음)  
+>   - SecA(Secondary Average)  
+>       - 수정타율의 개념 : 타수 당 추가 진루율 / 장타, 볼넷, 도루의 득점 기여도 고려  
+>   - TA(Total Average)  
+>       - 종합공격력 : 아웃카운트 하나 당 진루한 베이스 수  
+>   - RC(Runs Created)  
+>       - 득점 공헌도 : 출루율과 루타수의 곱/타석(=전체 시즌을 통해 타자가 실제로 득점에 공헌한 정도)  
+>   - RC/27(Runs Rreated per game)  
+>       - 한 경기 당 득점 공헌도(=모든 타자가 A로만 구성된다고 가정 → A가 낼 수 있는 득점)  
+>   - wOBA(weighted On Base Average)  
+>       - 가중 출루율 : 타석 당 득점 기대치 (OPS의 단점 보완), 볼넷, 사구, 단타, 2루타, 3루타, 홈런, 에러로 인한 출루에 가중치 부여  
+>   - XR(eXtrapolated Runs)  
+>       - 추정 득점 : RC를 보완함  
